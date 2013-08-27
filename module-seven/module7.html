@@ -1,20 +1,35 @@
 <!DOCTYPE HTML>
 <html lang="en-US">
-<center>
-<head>
+
 	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-	<meta charset="UTF-8">
+	<link rel="stylesheet/less" href="less/bootstrap.less" media="all" />
+    <meta charset="UTF-8">
 	<title>Movie Search Engine</title>
+	<script src="js/less-1.1.4.min.js"></script>
 	<script type="text/javascript" src="jquery.js"></script>
 	<script type="text/javascript" src="module.js"></script>
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="js/jquery/jquery.tablesorter.min.js"></script>
+
 	<style type="text/css">
+	
+	.tr{
+	width: 500px;
+	}
 	.movie_container
 	{
-	margin-top:20px;
+	margin-top:0px;
 	margin-bottom:20px;
-	margin-right:100px;
-	margin-left:100px;
+	margin-right:20px;
+	margin-left:20px;
+	}
+	.movie_header
+	{
+	
+	margin-top:20px;
+	margin-bottom:0px;
+	margin-right:20px;
+	margin-left:20px;
 	}
 	</style>
 </head>
@@ -25,13 +40,13 @@
   <div class="navbar-inner">
     <div class="container">
       
-      <a class="brand" href="#">MODULE 7 </a>
+      <a class="brand" href="#">MODULE 7b </a>
       
   </div>
 </div>
 	<div class="container">
 			<FONT COLOR="#FFFFFF">
-			
+			<center>
 			<h1>TEAM GREAT</h1>
 			<h2>Movie Search Engine</h2>
 	
@@ -42,17 +57,31 @@
 				<input type="reset" value="Clear" id="reset" class="btn btn-medium btn-warning"/>
 				
 			</form>
-		
+			
 		
 		<div id="result">
 			<div id="searchresult"></div>
 			<div id="counter"></div>
 			<div class="clear"></div>
 		</div>
+		</center>
+		<div class="movie_header">
+			<center>
+			<table class="table-bordered">
+				<thead>
+					<th style="width: 90px;"> POSTER </th>
+					<th style="width: 150px;"> MOVIE TITLE </th>
+					<th style="width: 500px;"> SYNOPSIS </th>
+					<th style="width: 90px;"> YEAR </th>
+				</thead>
+			</table>
+			</center>
+		</div>
 		
 		<div class="movie_container">
-		
+			
 		</div>
+				
 			</FONT>
 	</div>
 
@@ -62,5 +91,5 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 </body>
-</center>
+
 </html>

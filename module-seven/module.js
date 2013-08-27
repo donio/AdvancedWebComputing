@@ -5,6 +5,10 @@ $(document).ready(function(){
 		
 		if(searchmovie == ""){
 			alert("Error: Empty Search Box! Please input title/keyword to continue process");
+		
+		if(searchmovie ==""){
+			alert("Error: Keyword too short. Please try again");
+			}
 			
 		}
 
@@ -17,7 +21,7 @@ $(document).ready(function(){
 				url: url,
 				data: {
 					q: searchmovie,
-					apiKey: 'hcrurhsttexasrgfm2y6yahm'
+					apiKey: 'kzydjpv969n5v7hzumzeyb5c'
 				},
 					dataType: 'jsonp',
 					success: showMovies
@@ -27,13 +31,13 @@ $(document).ready(function(){
       function showMovies(response){
     
       console.log(response);
-        $('.movie_container').html("");
+		   $('.movie_container').html("");
         for(i=0;i<response.movies.length;i++){
           
           var movie = response.movies[i];
           var synopsis = movie.synopsis;
-            
-          $('.movie_container').append('<table class="table">'+' <tbody>'+'<tr>'+'<div class="movie_holder">'+'<div class="thumb">'+'<img src="' +movie.posters.thumbnail+'"/>'+'</div>'+'<div class="title">'+'<p class="movie_title">' +movie.title+ '</p>'+'<div class="synopsis">'+'<p>'+synopsis+'</p>'+'</div>'+'</div>'+'<div class="year">'+'<p>Year: ' +movie.year+ '</p>'+'</div>'+'</div>'+'<div class="clear">'+'</tbody> </thead> </div><hr>');
+           
+          $('.movie_container').append('<center><table class="table-bordered">'+'<tbody><tr class="tr"><div class="movie_holder">'+'<td style="width: 90px;"><div class="thumb">'+'<img src="' +movie.posters.thumbnail+'" width = "100" height = "100"/></td>'+'</div>'+'<td style="width: 150px;"><div class="title">'+'<p class="movie_title">' +movie.title+ '</p></td>'+'<td style="width: 500px;"><div class="synopsis">'+synopsis+'</td>'+'</div>'+'</div>'+'<td style="width: 90px;"><center><div class="year">' +movie.year+ '</td>'+'</div>'+'</div></center>'+'<div class="clear">'+'</div>'+'</tbody>'+'</table></center>');
          
           var numberResult = response.movies.length;
           console.log(numberResult); 
