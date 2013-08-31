@@ -5,15 +5,19 @@
 			<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
 	</head>
 	<body>
-		<div class="jumbotron">
-  			<div class="container">
-    			<h1>Hello, world!</h1>
-    				<p>...</p>
-    				<p><a class="btn btn-primary btn-lg">Learn more</a></p>
-  			</div>
-		</div>
-		<br>
-		<span class="label label-default">Hi World</span>
+		<ul>
+		</ul>
 
+
+
+
+
+		<script id='tpl-movie' type="text/x-handlebars-template">
+				<li> {{title}} ({{year}}) -- {{mpaa_rating}}</li>
+		</script>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/handlebars.js"></script>
+		<script src="js/app.js"></script>
 	</body>
 </html>
