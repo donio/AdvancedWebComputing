@@ -1,6 +1,6 @@
 body {
     padding-top: 70px;
 }
-.navbar{
-	background-color: #90a0aa;
+.navbar-inverse{
+	background-color: gray;
 }

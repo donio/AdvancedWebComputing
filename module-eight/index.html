@@ -4,9 +4,10 @@
         <title>Movie Search</title>
         <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
+        <link rel="shortcut icon" href="icon.ico">
     </head>
     <body>
-        <div class="navbar navbar-fixed-top">
+        <div class="navbar navbar-inverse navbar-fixed-top">
         	
             <div class="container">
                 <div class="navbar-header">
@@ -15,14 +16,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <font color = 'white'><a class="navbar-brand" href="#">Movie Search</a></font>
+                    <a class="navbar-brand" href="#">Module 8</a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Box Office</a></li>
-                        <li><a href="#about">Search</a></li>
-                        <li><a href="#contact">About</a></li>
+                        
+				<li><input id = 'searchMovie' type = 'text'  
+				placeholder = "Munch on a movie..."
+				onkeydown ="if (event.keyCode == 13 && this.value.trim() != '' ) {pageNum = 1; searchString = $(this).val(); mode = 'search'; searchMovie();}"></li>
+			
                     </ul>
+                    
                 </div>
             </div>
 
