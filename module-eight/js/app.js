@@ -68,9 +68,6 @@ $(function () {
         }
     });
 
-    $('#synopsis').click(function(){
-        alert('synopsis');
-    });
 
     $('#boxOffice').click(function(){
         resetValues();
