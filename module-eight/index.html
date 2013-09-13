@@ -1,10 +1,12 @@
 <html>
 <head>
     <title>TITLEnium</title>
-
     <script src = 'js/jquery.js'></script>
+    <script src = 'js/bootstrap.js'></script>
     <script src = 'js/handlebars.js'></script>
     <script src = 'js/app.js'></script>
+
+   
     <link rel="icon" type="image/ico" href="icon.ico"></link> 
     <link rel="shortcut icon" href="icon.ico"></link>
     <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
@@ -35,6 +37,20 @@
     </style>
 </head>
 <body>
+
+   <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="z-index:100";>
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel">Modal header</h3>
+  </div>
+  <div class="modal-body">
+    <p>One fine body…sdfsadvfsavdbhj</p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <button class="btn btn-primary">Save changes</button>
+  </div>
+</div>
     <nav class="navbar-inverse navbar-default" role="navigation">
         <a class="navbar-brand" href="https://github.com/donio">Module 8</a>
 
@@ -50,7 +66,7 @@
         <div class="btn-group btn-group-lg">
         <button id="boxOffice" type="button" class="btn btn-default navbar-btn btn-primary"><span class="glyphicon glyphicon-star"></span> Box Office</button>
         <button id="openMovies" type="button" class="btn btn-default navbar-btn btn-info"><span class="glyphicon glyphicon-globe"></span> Opening Movies</button>
-        <button id="inTheaters" type="button" class="btn btn-default navbar-btn btn-primary"><span class="glyphicon glyphicon-play"></span> In Theaters</button>
+        <button id="in-theaters" type="button" class="btn btn-default navbar-btn btn-primary"><span class="glyphicon glyphicon-play"></span> In Theaters</button>
         <button id="upMovies" type="button" class="btn btn-default navbar-btn btn-info"><span class="glyphicon glyphicon-fire"></span> Coming Soon</button>
         <button id="topRentals" type="button" class="btn btn-default navbar-btn btn-primary"><span class="glyphicon glyphicon-expand"></span> Top Rentals</button>
         <button id="currentRel" type="button" class="btn btn-default navbar-btn btn-info"><span class="glyphicon glyphicon-heart"></span> Current Releases</button>
@@ -58,10 +74,11 @@
         <button id="upDVD" type="button" class="btn btn-default navbar-btn btn-info"><span class="glyphicon glyphicon-time"></span> Soon on DVD</button>
         </div>
     </nav>
+
+    <div id="thumbnails" class="appwrap row ">
     
-    <div id="thumbnails" class="row">
         <script id="movie-container" type="text/x-handlebars-template">
-            <div id="example" class="col-lg-3 btn btn-default" >
+            <div id="example" class="movwrap col-lg-3 btn btn-default " >
                 <div>
                     <img src="{{posters.detailed}}" width="180px" height="250px" >
                 </div>
@@ -70,12 +87,30 @@
                     {{mpaa_rating}} <br>
                     
                 </div>
+                <div class="synopsis" style="display:none">{{synopsis}}</div>
             </div>
+            
         </script>
-        
+       
     </div>
 
     <ul id="list">
     </ul>
+ 
+
+ 
+ 
 </body>
 </html>
+
+<script>
+	$(document).ready(function(){
+		$("#list").on("click", "div.movwrap", function(){
+		
+			var synopsis = $(this).find('.synopsis').text();
+			alert(synopsis);
+		});	
+	
+		
+	});
+</script>
