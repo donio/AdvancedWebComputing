@@ -69,7 +69,7 @@ $(function () {
     });
 
     $(function(){
-        $("example").popover('show');
+        $("#example").popover('show');
     });
 
     $('#boxOffice').click(function(){
@@ -77,7 +77,7 @@ $(function () {
         request(url + "movies/box_office.json", data);
     });
 
-    $('#in-theaters').click(function(){
+    $('#inTheaters').click(function(){
         resetValues();
         request(url + "movies/in_theaters.json", data);
     });
@@ -111,6 +111,7 @@ $(function () {
         resetValues();
         request(url + "dvds/upcoming.json", data);
     });
+
 
    
     function resetValues(){
