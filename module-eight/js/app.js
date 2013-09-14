@@ -76,47 +76,36 @@ $(function () {
         resetValues();
         request(url + "movies/box_office.json", data);
     });
-
     $('#in-theaters').click(function(){
         resetValues();
         request(url + "movies/in_theaters.json", data);
     });
-
     $('#openMovies').click(function(){
         resetValues();
         request(url + "movies/opening.json", data);
     });
-
     $('#upMovies').click(function(){
         resetValues();
         request(url + "movies/upcoming.json", data);
     });
-
     $('#topRentals').click(function(){
         resetValues();
         request(url + "dvds/top_rentals.json", data);
     });
-
     $('#currentRel').click(function(){
         resetValues();
         request(url + "dvds/current_releases.json", data);
     });
-
     $('#newDVD').click(function(){
         resetValues();
         request(url + "dvds/new_releases.json", data);
     });
-
     $('#upDVD').click(function(){
         resetValues();
         request(url + "dvds/upcoming.json", data);
     });
-
     
-   
     function resetValues(){
-
-
         console.log('Searching movies');
         alert('Now Loading. Click OK to Continue.');
         $('#searchbox').val('');
