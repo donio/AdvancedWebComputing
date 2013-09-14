@@ -70,9 +70,7 @@ $(function () {
         }
     });
 
-    $(function(){
-        $("#list div.movwrap").popover('show');
-    });
+    
 
     $('#boxOffice').click(function(){
         resetValues();
@@ -117,8 +115,7 @@ $(function () {
     
    
     function resetValues(){
-        var myNode = document.getElementById("list");
-        myNode.innerHTML = '';
+
 
         console.log('Searching movies');
         alert('Now Loading. Click OK to Continue.');

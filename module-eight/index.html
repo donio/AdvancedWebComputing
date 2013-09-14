@@ -31,10 +31,13 @@
         border-style: solid ;
         border-color: #90a0aa;
         border-width: 10px;
-        display: box;
+        display: inline-block;
 
     }
-    
+    .title{
+        position: relative;
+
+    }
     </style>
 </head>
 <body>
@@ -63,30 +66,31 @@
         </div>
     </nav>
 
-    <div id="thumbnails" class="appwrap row ">
-    
-        <script id="movie-container" type="text/x-handlebars-template">
-            <div id="example" class="movwrap col-lg-3 btn btn-default " >
-                <div>
-                    <img src="{{posters.detailed}}" width="180px" height="250px" >
-                </div>
-                <div>
-                    <div style="display:inline-flex"> {{title}} </div>({{year}}) <br>
-                    {{mpaa_rating}} <br>
-                    
-                </div>
-                <div class="synopsis" style="display:none">Synopsis: <br><br> {{synopsis}}</div>
+    <div id="thumbnails" class="appwrap row container">
+        
+
             </div>
-            
-        </script>
-       
-    </div>
 
     <ul id="list">
     </ul>
  
 
- 
+         <script id="movie-container" type="text/x-handlebars-template">
+
+            <div id="example" class="movwrap col-lg-3  btn btn-default" >
+                    
+                    <center><img src="{{posters.detailed}}" width="180px" height="250px" ></center>
+                
+                
+                    <center><div class="title" >{{title}} ({{year}}) <br>
+                    {{mpaa_rating}} <br></div></center>
+
+                    
+                
+                <div class="synopsis" style="display:none">Synopsis: <br><br> {{synopsis}}</div>
+            </div>
+            
+        </script>
  
 </body>
 </html>
