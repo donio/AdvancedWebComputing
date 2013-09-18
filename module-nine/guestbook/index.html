@@ -7,20 +7,15 @@
   <body>
       
   <div class="container">
-
-
-    <br>
-    <a href="{{ url|safe }}">{{ url_linktext }}</a>
-    <br>
-
+    <h1>Guestbook System</h1>
     <form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
-          <div><textarea id="tArea" name="content" rows="4" cols="42"></textarea></div>
-          <div><input id="btn" type="submit" value="Sign Guestbook"></div>
+          <div><textarea id="txtbox" name="content" rows="1" cols="30"></textarea></div><br />
+          <div><input id="submitbtn" type="submit" value="Sign Guestbook"></div>
     </form>
 
       <br>
 
-      <div class="adjust">
+      <div class="container1">
         <hr>
           <div id="list">
           
@@ -31,7 +26,7 @@
             {% else %}
              Guest:
             {% endif %}
-            <blockquote>{{ greeting.content }}</blockquote>
+            <strong><blockquote>{{ greeting.content }}</blockquote></strong>
           {% endfor %}
           <br>
           </div>
@@ -43,13 +38,15 @@
           <br>
           <form>Guestbook name
             <br>
-            <input value="{{ guestbook_name }}" name="guestbook_name">
-            <br>
-            <input id="btn1" type="submit" value="switch">
+            <strong><input value="{{ guestbook_name }}" name="guestbook_name"></strong>
+            <br><br>
+            <input id="switchbtn" type="submit" value="switch">
           </form>
         </div>
         
-
+        <br>
+    <a href="{{ url|safe }}">{{ url_linktext }}</a>
+    <br>
         
   </div>
         
