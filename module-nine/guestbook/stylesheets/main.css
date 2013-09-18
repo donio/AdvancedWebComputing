@@ -20,10 +20,10 @@ a {
 .container {
 	outline-offset: 10px;
 	margin: auto;
-	height: 500px;
+	height: 550px;
 	width: 500px;
 	margin-top: 40px; 
-	outline: 10px ridge black;
+	outline: 10px outset black;
 	}
 
 #submitbtn {
@@ -39,18 +39,20 @@ a {
 
 #switchbtn {
 	border-radius: 2px;
-	padding: 4px;
+	padding: 6px;
 	background: green;
-	font-family: Century Gothic;
-	font-size: 11pt;
+	font-family: Arial;
+	font-size: 9pt;
 	font-weight: bold;
 	color: white;
 }
 
 #txtbox {
-	
+	text-align: center;
 	background: white;
 	margin: auto;
+	font-family: Arial;
+	font-size: 15px;
 }
 
 .container1 {
@@ -69,8 +71,15 @@ a {
 	
 }
 
-#end {
+#bottom {
+
 margin: auto; 
+}
+#guest{
+	font-size: 15px;
+	text-align: center;
+	color:white;
+	font-family: Arial;
 }
 
 form {
