@@ -1,0 +1,79 @@
+body {
+  font-family: Arial;
+  background-color: teal;
+}
+
+a {
+	text-decoration: none;
+	font-family: Arial;
+	font-size: 20pt;
+	font-weight: bold;
+	color: white;
+	padding-left: 20px;
+}
+
+.container {
+	margin: auto;
+	height: 500px;
+	width: 500px;
+	margin-top: 80px; 
+	outline: 10px ridge black;
+	outline-offset: 10px;
+}
+
+#btn {
+	border-radius: 2px;
+	padding: 4px;
+	background: #FF3333;
+	font-family: Century Gothic;
+	font-size: 9pt;
+	font-weight: bold;
+	color: white;
+	margin-left: 300px;
+}
+
+#tArea {
+	margin-top: 15px;
+	background: white;
+	margin-left: 40px;
+}
+
+.adjust {
+	width: 450px;
+	margin: auto;
+}
+
+#list {
+	width: auto;
+	overflow: auto;
+	height: 150px;
+	font-family: Arial;
+	font-size: 11px;
+	color: white;
+	text-align: center;
+}
+
+#end {
+margin: auto; 
+}
+
+form {
+	color: white;
+	font-family: Century Gothic;
+	font-size: 10px;
+	text-align: center;
+}
+
+input {
+	text-align: center;
+}
+
+#btn1 {
+	border-radius: 2px;
+	padding: 4px;
+	background: #FF3333;
+	font-family: Century Gothic;
+	font-size: 11pt;
+	font-weight: bold;
+	color: white;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% autoescape true %}
+<html>
+  <head>
+    <link type="text/css" rel="stylesheet" href="/stylesheets/main.css" />
+  </head>
+  <body>
+      
+  <div class="container">
+
+
+    <br>
+    <a href="{{ url|safe }}">{{ url_linktext }}</a>
+    <br>
+
+    <form action="/sign?guestbook_name={{ guestbook_name }}" method="post">
+          <div><textarea id="tArea" name="content" rows="4" cols="42"></textarea></div>
+          <div><input id="btn" type="submit" value="Sign Guestbook"></div>
+    </form>
+
+      <br>
+
+      <div class="adjust">
+        <hr>
+          <div id="list">
+          
+            {% for greeting in greetings %}
+            {% if greeting.author %}
+              <b>{{ greeting.author.nickname() }}</b>:
+              <br>
+            {% else %}
+             Guest:
+            {% endif %}
+            <blockquote>{{ greeting.content }}</blockquote>
+          {% endfor %}
+          <br>
+          </div>
+        <hr>
+      </div> 
+        
+        
+        <div id="end">
+          <br>
+          <form>Guestbook name
+            <br>
+            <input value="{{ guestbook_name }}" name="guestbook_name">
+            <br>
+            <input id="btn1" type="submit" value="switch">
+          </form>
+        </div>
+        
+
+        
+  </div>
+        
+
+  </body>
+</html>
+{% endautoescape %}
